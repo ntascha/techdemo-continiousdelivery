@@ -82,6 +82,12 @@
   "devDependencies": {
     "tailwindcss": "^3.3.1"
   },
+
+  "optionalDependencies": {
+  "fsevents": {
+    "os": "darwin"
+  }
+  },
   "scripts": {
     "start": "node build.js && npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "test": "jest"
