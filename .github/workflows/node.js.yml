@@ -26,8 +26,11 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Build PWA with Webpack
+      - name: Build Node
         run: npm run build
+
+      - name: Build Tailwind CSS
+        run: npx tailwindcss build -o ./path/to/output.css
 
       - name: Run Jest Tests
         run: npm test
