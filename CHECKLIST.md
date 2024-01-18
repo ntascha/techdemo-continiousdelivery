@@ -77,7 +77,10 @@ Es wird dringend empfohlen, diese Checkliste in Ihr eigenes Projekt-Repository z
     * Auf Github die Datei ```node.js.yml``` für den Github-Worflow erstellt - damit wird alles automatisiert
 
 ### Testing
-- [ ] Unit Tests geschrieben und automatisiert
+- [x] Unit Tests geschrieben und automatisiert
+  * Jsdom installieren um tests einzurichten
+  ```npm install --save-dev jsdom```
+
 - [ ] Integrationstests implementiert (optional)
 - [ ] End-to-End Tests eingerichtet (optional)
 
