@@ -79,6 +79,9 @@
     "wrappy": "^1.0.2",
     "yaml": "^1.10.2"
   },
+  "optionalDependencies": {
+    "fsevents": "*"
+ },
   
   "devDependencies": {
     "tailwindcss": "^3.3.1"
