@@ -67,7 +67,7 @@ Um mit der Installation von Tailwindcss zu starten sind folgende Ressourcen notw
 3. Datei ausführen 
 
    ```
-   npm run dev
+   npm start
    ```
 
 4. Im output.css sieht man nun alle tailwindcss Klassen.
