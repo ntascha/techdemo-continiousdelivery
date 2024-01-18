@@ -82,7 +82,8 @@
     "tailwindcss": "^3.3.1"
   },
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "start": "node build.js && npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
