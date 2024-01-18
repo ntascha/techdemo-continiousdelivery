@@ -27,7 +27,7 @@ jobs:
         run: npm install
 
       - name: Build Node
-        run: npm run build
+        run: npm run
 
       - name: Build Tailwind CSS
         run: npx tailwindcss build -o ./path/to/output.css
