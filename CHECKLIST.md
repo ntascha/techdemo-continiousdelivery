@@ -39,7 +39,7 @@ Es wird dringend empfohlen, diese Checkliste in Ihr eigenes Projekt-Repository z
 ### Automatisierung
 - [x] Automatisierte Builds eingerichtet
 - [x] Automatisierte Tests implementiert
-- [ ] Automatisierte Deployments konfiguriert
+- [x] Automatisierte Deployments konfiguriert
 
 ### Testing
 - [ ] Unit Tests geschrieben und automatisiert
