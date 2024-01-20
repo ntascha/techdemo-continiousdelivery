@@ -91,9 +91,22 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "testMatch": ["**/?(*.)+(spec|test).[jt]s?(x)"]
-  },  
+    "testMatch": [
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ]
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntascha/techdemo-continiousdelivery.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ntascha/techdemo-continiousdelivery/issues"
+  },
+  "homepage": "https://github.com/ntascha/techdemo-continiousdelivery#readme"
 }
