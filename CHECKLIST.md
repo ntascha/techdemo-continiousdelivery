@@ -127,7 +127,7 @@ Allyssa Ulz, Monika Popic, Natascha Baumgartner
 - [ ] Verwendung in einer Build-Pipeline
 
 ### Feedback-Schleifen & Benachrichtigungen
-- [ ] Feedback von Stakeholdern eingeholt und implementiert
+- [ ] ~~Feedback von Stakeholdern eingeholt und implementiert~~
 - [x] Developer Benachrichtigungen
       In Github wurden zwei Mail-Adressen für die Benachrichtigung, sobald etwas gepusht wurde eingerichtet:
       ![documentation-img](/src/documentation-img-4.png)
