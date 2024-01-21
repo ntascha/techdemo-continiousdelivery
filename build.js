@@ -37,12 +37,10 @@ const app = express();
 const port = config.port || 3000; // Verwendung eines Ports aus der Konfiguration
 
 // Statische Dateien aus dem "dist"-Ordner bereitstellen
-app.use(express.static(path.join(__dirname, config.paths.css))); // Verwendung des Pfades aus der Konfiguration
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // Route für die Hauptseite
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, config.paths.html)); // Senden der Haupt-HTML-Datei
-});
+app.use(express.static(path.join(__dirname, 'src')));
   
 
 // Server auf Port 3000 starten
