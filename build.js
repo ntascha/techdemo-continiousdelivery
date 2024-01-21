@@ -34,7 +34,7 @@ async function buildTailwind() {
 
 // Express.js-Server erstellen
 const app = express();
-const port = config.port || 3000; // Verwendung eines Ports aus der Konfiguration
+const port = 3000; // Verwendung eines Ports aus der Konfiguration
 
 // Statische Dateien aus dem "dist"-Ordner bereitstellen
 app.use(express.static(path.join(__dirname, 'dist')));
