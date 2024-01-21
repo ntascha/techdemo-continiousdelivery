@@ -1,6 +1,7 @@
 const { exec } = require('child_process');
 const express = require('express');
 const path = require('path');
+const config = require('./config.json');
 
 // Tailwind CSS build-Befehl
 const tailwindBuildCommand = 'npx tailwindcss -i ./src/input.css -o ./dist/output.css';
@@ -33,13 +34,15 @@ async function buildTailwind() {
 
 // Express.js-Server erstellen
 const app = express();
-const port = 3000;
+const port = config.port || 3000; // Verwendung eines Ports aus der Konfiguration
 
 // Statische Dateien aus dem "dist"-Ordner bereitstellen
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, config.paths.css))); // Verwendung des Pfades aus der Konfiguration
 
 // Route für die Hauptseite
-app.use(express.static(path.join(__dirname, 'src')));
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, config.paths.html)); // Senden der Haupt-HTML-Datei
+});
   
 
 // Server auf Port 3000 starten
