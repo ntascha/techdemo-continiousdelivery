@@ -4,7 +4,7 @@
     "description": "Eine ansprechende Webseite, die Bilder und Inhalte mit modernem Design zeigt, gestaltet mit Tailwind CSS."
   },
   "paths": {
-    "css": "dist/output.css",
+    "css": "./dist/output.css",
     "images": [
       "src/docker_container.png",
       "src/docker_image.png",
