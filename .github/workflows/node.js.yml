@@ -27,7 +27,7 @@ jobs:
         run: npm install
 
       - name: Build Tailwind CSS
-        run: npx tailwindcss build -o ./path/to/output.css
+        run: /usr/bin/npx tailwindcss build -c tailwind.config.js -o ./dist/output.css
 
       - name: Run Jest Tests
         run: npm test
