@@ -5,13 +5,12 @@ name: Node.js CI with Docker
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main" ] 
   pull_request:
     branches: [ "main" ]
 
 jobs:
   build_and_test:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -26,8 +25,11 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Modify Permission for Tailwind CSS
+        run: chmod +x $(npm bin)/tailwindcss
+
       - name: Build Tailwind CSS
-        run: npx tailwindcss build -o ./path/to/output.css
+        run: npx tailwindcss@latest build -o ./path/to/output.css
 
       - name: Run Jest Tests
         run: npm test
