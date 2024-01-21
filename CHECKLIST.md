@@ -131,7 +131,7 @@ Allyssa Ulz, Monika Popic, Natascha Baumgartner
 
 ### Konfigurationsmanagement
 - [x] Konfigurationsdateien versioniert und zentralisiert
-- [ ] Verwendung in einer Build-Pipeline
+- [x] Verwendung in einer Build-Pipeline
 
 ### Feedback-Schleifen & Benachrichtigungen
 - [ ] ~~Feedback von Stakeholdern eingeholt und implementiert~~
