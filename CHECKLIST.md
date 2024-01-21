@@ -130,7 +130,7 @@ Allyssa Ulz, Monika Popic, Natascha Baumgartner
 - [x] Integration in eine Build-Pipeline
 
 ### Konfigurationsmanagement
-- [ ] Konfigurationsdateien versioniert und zentralisiert
+- [x] Konfigurationsdateien versioniert und zentralisiert
 - [ ] Verwendung in einer Build-Pipeline
 
 ### Feedback-Schleifen & Benachrichtigungen
