@@ -4,7 +4,7 @@ const path = require('path');
 const config = require('./config.json');
 
 // Tailwind CSS build-Befehl
-const tailwindBuildCommand = 'npx tailwindcss -i ./src/input.css -o ./dist/output.css';
+const tailwindBuildCommand = 'npx tailwindcss -i ./src/input.css -o ' + config.paths.css;
 
 // Funktion zum Ausführen von Shell-Befehlen
 function runCommand(command) {
@@ -34,7 +34,7 @@ async function buildTailwind() {
 
 // Express.js-Server erstellen
 const app = express();
-const port = 3000;
+const port = config.port | 3000;
 
 // Statische Dateien aus dem "dist"-Ordner bereitstellen
 app.use(express.static(path.join(__dirname, 'dist')));
