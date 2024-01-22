@@ -16,6 +16,10 @@ COPY . .
 # Tailwind CSS builden
 RUN npx tailwindcss -i ./src/input.css -o ./dist/output.css
 
+# Füge diese Zeilen hinzu, um die Berechtigungen für /dist anzupassen
+RUN mkdir -p /dist
+RUN chown -R node:node /dist
+
 # Ihr Port, der vom Anwendungen genutzt wird
 EXPOSE 3000
 
