@@ -121,7 +121,7 @@ Allyssa Ulz, Monika Popic, Natascha Baumgartner
 ### Containerisierung
 - [x] Docker oder ähnliche Technologien eingesetzt
   * Download Docker and open the app 
-  * Führe diesen Befehl aus ```docker build -t techdemo-continiousdelivery``` um das Docker-Image zu bauen
+  * Führe diesen Befehl aus ```docker build -t techdemo-continiousdelivery .``` um das Docker-Image zu bauen
   ![documentation-img](/src/docker_image.png)
   * Um Docker-Container auszuführen führe dieses Kommando aus: ```docker run -p 3000:3000 techdemo-continiousdelivery```
   * BILD EINFÜGEN
