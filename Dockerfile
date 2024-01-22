@@ -13,8 +13,9 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-# Tailwind CSS builden
+RUN npm install -g tailwindcss
 RUN npx tailwindcss -i ./src/input.css -o ./dist/output.css
+
 
 # Füge diese Zeilen hinzu, um die Berechtigungen für /dist anzupassen
 RUN mkdir -p /dist
