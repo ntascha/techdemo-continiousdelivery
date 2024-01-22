@@ -119,12 +119,19 @@ Allyssa Ulz, Monika Popic, Natascha Baumgartner
 - [ ] ~~Rollback-Strategien (optional)~~
 
 ### Containerisierung
-- [ ] Docker oder ähnliche Technologien eingesetzt
-- [ ] Integration in eine Build-Pipeline
+- [x] Docker oder ähnliche Technologien eingesetzt
+  * Download Docker and open the app 
+  * Führe diesen Befehl aus ```docker build -t techdemo-continiousdelivery``` um das Docker-Image zu bauen
+  ![documentation-img](/src/docker_image.png)
+  * Um Docker-Container auszuführen führe dieses Kommando aus: ```docker run -p 3000:3000 techdemo-continiousdelivery```
+  * BILD EINFÜGEN
+  ![documentation-img](/src/docker_container.png)
+
+- [x] Integration in eine Build-Pipeline
 
 ### Konfigurationsmanagement
-- [ ] Konfigurationsdateien versioniert und zentralisiert
-- [ ] Verwendung in einer Build-Pipeline
+- [x] Konfigurationsdateien versioniert und zentralisiert
+- [x] Verwendung in einer Build-Pipeline
 
 ### Feedback-Schleifen & Benachrichtigungen
 - [ ] ~~Feedback von Stakeholdern eingeholt und implementiert~~
@@ -134,7 +141,33 @@ Allyssa Ulz, Monika Popic, Natascha Baumgartner
 
 
 ### Sicherheit
-- [ ] Zugangsdaten sicher hinterlegt
+- [x] Zugangsdaten sicher hinterlegt
+  * Es wurde GitHub Secrets zur sicheren Speicherung der Docker Zugangsdaten verwendet. Dies ermöglicht es unseren GitHub Actions Workflows, sicher mit Docker Hub zu interagieren, ohne sensible Informationen wie Benutzernamen und Passwörter im Code oder in den Logdateien preiszugeben.
+
+  #### Einrichtung von GitHub Secrets
+  GitHub Secrets sind eine sichere Möglichkeit, um nicht-öffentliche Daten wie Passwörter, private Schlüssel und andere sensitive Informationen zu speichern. Secrets werden in GitHub verschlüsselt und sind nicht in den Logs der Workflows sichtbar.
+
+  Für unser Projekt haben wir die folgenden Secrets eingerichtet:
+
+  DOCKERHUB_USERNAME: Der Benutzername für den Docker Hub Account, der zum Hochladen unserer Docker Images benötigt wird.
+  DOCKERHUB_PASSWORD: Ein Personal Access Token (PAT), der als Ersatz für das Docker Hub Passwort dient. Dieses Token gewährt unserem Workflow die erforderliche Berechtigung, um Images zu pushen und zu pullen, ohne das tatsächliche Passwort zu verwenden.
+
+  Erstellung eines Personal Access Tokens (PAT): 
+  Anstatt unser Docker Hub Passwort direkt zu verwenden, erzeugen wir ein PAT über die Docker Hub Website. Dieses Token bietet mehrere Sicherheitsvorteile:
+
+  * Es kann spezifisch für den Zweck des CI/CD-Prozesses eingeschränkt werden.
+  * Es lässt sich jederzeit widerrufen, ohne das Docker Hub Passwort zu ändern oder andere Services zu beeinträchtigen.
+  * Es reduziert das Risiko, dass das Konto kompromittiert wird, falls der Token jemals offengelegt werden sollte.
+
+  Verwendung der Secrets im Workflow: 
+  Innerhalb unserer GitHub Actions Workflows verwenden wir die Secrets, um uns bei Docker Hub zu authentifizieren. Der Workflow lädt die Secrets dynamisch während der Ausführung und stellt sie den Schritten zur Verfügung, die eine Authentifizierung benötigen. Zum Beispiel sieht der Schritt zum Login bei Docker Hub folgendermaßen aus:
+
+  ```- name: Login to DockerHub
+  uses: docker/login-action@v1
+  with:
+    username: ${{ secrets.DOCKERHUB_USERNAME }}
+    password: ${{ secrets.DOCKERHUB_PASSWORD }}
+  ```
 
 ### Datenbanken
 Folgende Punkte wurden nicht implementiert, da für das Projekt keine Datenbank notwendig ist.
