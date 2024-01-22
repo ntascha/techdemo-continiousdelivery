@@ -6,17 +6,17 @@
   "paths": {
     "css": "./dist/output.css",
     "images": [
-      "src/docker_container.png",
-      "src/docker_image.png",
-      "src/documentation-img-4.png",
-      "src/img-1.jpg",
-      "src/img-2.jpg",
-      "src/img-3.jpg"
+      "./src/docker_container.png",
+      "./src/docker_image.png",
+      "./src/documentation-img-4.png",
+      "./src/img-1.jpg",
+      "./src/img-2.jpg",
+      "./src/img-3.jpg"
     ],
     "html": "src/index.html"
   },
   "tailwindConfig": "tailwind.config.js",
   "test": {
-    "path": "test/simple.test.js"
+    "path": "./test/simple.test.js"
   }
 }
