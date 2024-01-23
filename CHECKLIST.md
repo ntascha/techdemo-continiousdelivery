@@ -101,7 +101,7 @@ Allyssa Ulz, Monika Popic, Natascha Baumgartner
        die von einem Teil der Endbenutzer verwendet wird.
      - Die Ergebnisse werden dann mit denen der alten Version verglichen, um zu bestimmen, welche Version besser ist.
 
-   #### Für dieses Webprojekt, wäre das Canary Deployment besonders von Vorteil.
+#### Für dieses Webprojekt, wäre das Canary Deployment besonders von Vorteil.
 
 1. Kontrollierte Einführung neuer Features
     - Neue Feautures wie z.B. Design-Änderungen oder zusätzliche Funktionen können zuerst an einer kleinen Teilmenge der Nutzer getestet werden, bevor es für alle Nutzer verfügbar ist
